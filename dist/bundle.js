@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \"body .avatar{width:150px;height:150px;transform:translate(100px, 100px)}\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./src/index.scss?./node_modules/css-loader!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/src");
+eval("exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \"body .avatar{width:150px;height:150px;-webkit-transform:translate(100px, 100px);transform:translate(100px, 100px)}\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./src/index.scss?./node_modules/css-loader!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/src");
 
 /***/ }),
 
