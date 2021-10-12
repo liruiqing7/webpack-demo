@@ -1,8 +1,9 @@
 {
   "name": "lesson",
   "version": "1.0.0",
-  "description": "",
+  "description": "webpack learning demo",
   "main": "index.js",
+  "private":true,
   "scripts": {
     "bundle": "webpack"
   },
