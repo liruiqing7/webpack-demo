@@ -1,0 +1,13 @@
+import avatar from './avatar.jpg';
+
+const creatAvatar = () => {
+
+  var img = new Image();
+  img.src = avatar;
+  img.classList.add('avatar');
+
+  var root = document.getElementById('root');
+  root.append(img);
+}
+
+export default creatAvatar;
