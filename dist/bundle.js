@@ -86,25 +86,14 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/css-loader/index.js!./src/avatar.css":
-/*!**************************************************!*\
-  !*** ./node_modules/css-loader!./src/avatar.css ***!
-  \**************************************************/
+/***/ "./node_modules/css-loader/index.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./src/index.scss":
+/*!***************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/src!./src/index.scss ***!
+  \***************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \".avatar{\\n  width: 150px;\\n  height: 150px;\\n  margin-top: 200px;\\n}\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./src/avatar.css?./node_modules/css-loader");
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/index.js!./src/index.css":
-/*!*************************************************!*\
-  !*** ./node_modules/css-loader!./src/index.css ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\nexports.i(__webpack_require__(/*! -!../node_modules/css-loader!./avatar.css */ \"./node_modules/css-loader/index.js!./src/avatar.css\"), \"\");\n\n// module\nexports.push([module.i, \"\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./src/index.css?./node_modules/css-loader");
+eval("exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \"body .avatar{width:150px;height:150px;transform:translate(100px, 100px)}\\n\", \"\"]);\n\n// exports\n\n\n//# sourceURL=webpack:///./src/index.scss?./node_modules/css-loader!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/src");
 
 /***/ }),
 
@@ -152,17 +141,6 @@ eval("module.exports = __webpack_require__.p + \"images/avatar_bd7a45571e4b5ccb8
 
 /***/ }),
 
-/***/ "./src/index.css":
-/*!***********************!*\
-  !*** ./src/index.css ***!
-  \***********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("\nvar content = __webpack_require__(/*! !../node_modules/css-loader!./index.css */ \"./node_modules/css-loader/index.js!./src/index.css\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/index.css?");
-
-/***/ }),
-
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -171,7 +149,18 @@ eval("\nvar content = __webpack_require__(/*! !../node_modules/css-loader!./inde
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _avatar_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./avatar.jpg */ \"./src/avatar.jpg\");\n/* harmony import */ var _avatar_jpg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_avatar_jpg__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nvar img = new Image();\nimg.src = _avatar_jpg__WEBPACK_IMPORTED_MODULE_0___default.a;\nimg.classList.add('avatar');\n\nvar root = document.getElementById('root');\nroot.append(img);\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _avatar_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./avatar.jpg */ \"./src/avatar.jpg\");\n/* harmony import */ var _avatar_jpg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_avatar_jpg__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.scss */ \"./src/index.scss\");\n/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nvar img = new Image();\nimg.src = _avatar_jpg__WEBPACK_IMPORTED_MODULE_0___default.a;\nimg.classList.add('avatar');\n\nvar root = document.getElementById('root');\nroot.append(img);\n\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/index.scss":
+/*!************************!*\
+  !*** ./src/index.scss ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("\nvar content = __webpack_require__(/*! !../node_modules/css-loader!../node_modules/sass-loader/dist/cjs.js!../node_modules/postcss-loader/src!./index.scss */ \"./node_modules/css-loader/index.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/src/index.js!./src/index.scss\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/index.scss?");
 
 /***/ })
 
