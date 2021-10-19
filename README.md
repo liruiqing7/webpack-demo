@@ -43,3 +43,5 @@ WebpackDevServer:
 - proxy：
   1. 跨域代理，React/Vue 常用。因为这两个脚手架底层使用了 WebpackDevServer。
 - 早期的 WebpackDevServer 并不是很好用，所有有些脚手架工具自己写了一些服务器工具。现在基本都在使用。
+
+Hot Module Replacement 模块热更新:
