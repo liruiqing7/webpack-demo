@@ -13,9 +13,9 @@
 // root.append(img);
 
 // ----------------如何打包字体------------------
-import './index.scss'
+import "./index.scss";
 
-var root = document.getElementById('root');
-root.innerHTML ='<div class="iconfont icon-bianji3">test</div>';
+var root = document.getElementById("root");
+root.innerHTML = '<div class="iconfont icon-bianji3">test</div>';
 
-console.log('执行')
+console.log("执行");
