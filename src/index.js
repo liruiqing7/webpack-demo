@@ -17,3 +17,5 @@ import './index.scss'
 
 var root = document.getElementById('root');
 root.innerHTML ='<div class="iconfont icon-bianji3">test</div>';
+
+console.log('执行')
