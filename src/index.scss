@@ -1,18 +1,18 @@
-@import './avatar.scss';
+@import "./avatar.scss";
 
 body {
-	.avatar {
-		width: 150px;
-		height: 150px;
-		transform: translate(100px, 100px);
-	}
+  .avatar {
+    width: 150px;
+    height: 150px;
+    transform: translate(100px, 100px);
+  }
 }
 
 @font-face {
   font-family: "iconfont"; /* Project id 2866389 */
-  src: url('./font/iconfont.woff2') format('woff2'),
-       url('./font/iconfont.woff') format('woff'),
-       url('./font/iconfont.ttf') format('truetype');
+  src: url("./font/iconfont.woff2") format("woff2"),
+    url("./font/iconfont.woff") format("woff"),
+    url("./font/iconfont.ttf") format("truetype");
 }
 
 .iconfont {
@@ -29,4 +29,8 @@ body {
 
 .icon-fenxiang1:before {
   content: "\e721";
+}
+
+.item_style:nth-of-type(odd) {
+  background: black;
 }

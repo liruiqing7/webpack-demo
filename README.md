@@ -37,6 +37,7 @@ sourceMap：
 
 WebpackDevServer:
 
+- 打包之后的文件没有放到 ist 目录下，而是放在了内存中，可以有效提高打包速度，提升开发效率。
 - webpack --watch: webpack 监听打包文件，如果源代码发生变化，它将立即打包生成新的目标代码。
 - webpack-dev-server: 不但会监听文件的改变，自动打包，还会刷新浏览器。
 - 使用 file 形式打开文件，如果想要发送 ajax 请求是不可能的，所以我们需要启用一个 local 服务。
@@ -45,3 +46,22 @@ WebpackDevServer:
 - 早期的 WebpackDevServer 并不是很好用，所有有些脚手架工具自己写了一些服务器工具。现在基本都在使用。
 
 Hot Module Replacement 模块热更新:
+
+- 实现热更新的效果，需要些 module.hot，但有一些 `loader` 或者 `babel perset` 中帮我们实现了这部分功能，例如 React，Vue，但引入比较偏的文件，还是需要自己手动写一下。
+- 如何使用：
+  1. 引入 webpack 到 webpack.config 中
+  2. 在 devServe 中配置 hot:true,hotOnly:true,
+  3. plugin 插件中添加：new webpack.HotMoudleReplacementPlugin()
+  4. 在 js 代码中增加监听代码
+  ```js
+    if(hot.module){
+      module.accept({'file name'},()=>{
+        // to do something
+      })
+    }
+  ```
+
+使用 Babel 处理 ES6 语法
+
+- 如何使用 Babel : npm install --save-dev babel-loader @babel/core
+- `babel/core` 是 babel 的核心库，它能够使 babel 识别 js 代码中的内容，然后转换成 AST 抽象语法树，再把抽象语法树编译生成一个新的语法。
