@@ -65,3 +65,27 @@ Hot Module Replacement 模块热更新:
 
 - 如何使用 Babel : npm install --save-dev babel-loader @babel/core
 - `babel/core` 是 babel 的核心库，它能够使 babel 识别 js 代码中的内容，然后转换成 AST 抽象语法树，再把抽象语法树编译生成一个新的语法。
+- babel/polyfill 是通过全局变量的方法注入代码，会造成全局污染。解决：引入 transform-runtime，它会使用闭包的方式打包代码。
+
+- promise、map 需要在低版本浏览器里注入进来，需要引入 babel/polyfill，这会使我们的包体积很大，所以，需要配置 useBuiltIns，他会检测文件中使用了哪些代码，从而只注入我们需要的代码，这会降低包体积。优化：使用 transform-runtime
+
+webpack 性能优化
+
+- 1.升级打包工具的版本，跟上技术的迭代；
+  升级 webpack、node、npm，yarn 版本；
+- 2.在尽可能少的模块上应用 loader;
+  比如打包 js 模块，需要添加 exclude:/node_modules/，避免 node_modules 下面的模块使用 loader；
+- 3.尽量少的使用 plugin;
+  比如在 dev 环境中不必使用 MiniCssExtractPlugin 插件提取 css 文件；不必使用 OptimizeCssAssetsPlugin 来压缩 css 文件；也可使用 include 指定的模块使用 Loader；
+- 4.默认 resolve.extensions 的值有：'.wasm', '.mjs', '.js', '.json';
+  合理的配置 resolve，比如 extensions（默认的文件类型）;mainFiles（默认子文件名）；alias(模块别名)
+- 5.dll 优化,提高打包速度；
+  使用 webpack.DllPlugin 生成 mainfest.json 文件和通过 webpack.dll.config 多入口文件，通过 output.library 参数控制打包生成的 dll 文件；
+  使用 webpack.DllReferencePlugin 文件引入 mainfest 文件（模块的映射文件）；
+  使用 AddAssetHtmlWebpackPlugin 往 html 文件插入已经打包好的 dll 文件；
+- 6.控制包的大小：用不到的就不引入或者使用 tree-shaking，或者使用 splitChunks 拆包
+- 7.多进程打包 happyPack thread-loader
+- 8.合理使用 sourceMap：不同环境使用合适的配置
+- 9.结合 stats 分析打包结果
+- 10.开发环境内存编译：使用 webpackDevServer，打包出的文件放在内存中
+- 11.开发环境无用插件剔除：开发环境 mode 设置为 development
